@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Inclusive+Sans&family=Montserrat&family=Poppins&family=Roboto&family=Space+Grotesk&family=Ubuntu&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.5s linear;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    /* box-shadow: rgba(100,100,111,0.2)
+    0px 7px 29px 0px; */
+}
+.logo{
+    color:  #766bee ;
+    font-size: 30px;
+}
+.navbar li{
+    display: inline-block;
+    padding: 2px 8px;
+}
+.navbar li a{
+    text-decoration: none;
+    color: #777;
+    font-size: 20px;
+    padding: 4px;
+}
+.navbar ul li::after,
+.navbar ul li::before{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: rgb(115, 122, 245);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after,
+.navbar ul li:hover::before{
+    width: 100%;
+}
+.btn{
+    background-color:   #766bee;
+    color: white;
+    border: none;
+    padding: 10px 27px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #777;
+  transform: translateY(-0.25em);
+}
+.burger{
+    display: none;
+    /* z-index: 3; */
+    position: absolute;
+    top: 15px;
+    right: 5%;
+     cursor: pointer;
+     font-size: 33px;
+     color: white;
+    
+}
+.row{
+    padding:2% 0;
+    width: 85%;
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.links{
+ 
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-align: center;
+}
+
+.links i{
+    padding: 7px;
+    color: #444;
+    font-size: 1.7em;
+    border-radius: 50%;
+    margin: 30% 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+    0 3px 6px rgba(0,0,0,0.23);
+}
+.links i:hover{
+    background-color: #5A4FCF;
+    color: white;
+}
+.left_side{
+    width: 40%;
+}
+.left_side h1{
+    font-size: 50px;
+}
+.left_side h1 span{
+    color: #777;
+}
+.para{
+    color: #777;
+    padding-bottom: 1%;
+}
+.para_2{
+    color: #777;
+    padding: 3% 0;
+    font-size: 13px;
+}
+.right_side{
+    width: 32%;
+}
+.right_side img{
+    width: 100%;
+}
+@media only screen and (max-width:909px){
+    .row{
+        /* flex-direction:column; */
+         flex-direction: column-reverse;
+        padding: 5% 0;
+        
+    }
+    .right_side{
+        width: 45%;
+    }
+    .left_side{
+        width: 80%;
+    }
+    .links{
+        flex-direction: row; 
+    
+         align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .links i{
+        margin:0 25% ;
+
+    }
+    .burger{
+        display: block;
+    }
+    .navbar{
+        height: 350px;
+        justify-content: space-around;
+        flex-direction: column;
+        transition: all 0.9s ease-out;
+        background-color: #1e1677;
+        position: relative;
+        overflow: hidden;
+        padding: 3% 0;
+    }
+    .navbar li{
+        display: block;
+        padding: 9% 0;
+        text-align: center;
+    }
+    .navbar li a{
+        color: aliceblue;
+    }
+    .h-class{
+        height: 78px;
+    }
+    .v-class{
+        opacity: 0;
+    }
+  
+} 
